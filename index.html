@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Created by Jose Luis Elizalde -->
+  <meta name="author" content="Jose Luis Elizalde">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oaxacan Indigenous Communities in California</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@700,800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-group">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-label="Oaxaca Indigenous Communities logo">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="3" fill="currentColor"/>
+          <line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <line x1="2" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="logo-text">Indigenous Peoples of Oaxaca in California</span>
+      </div>
+      <div class="header-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="language" aria-label="View by language">By Language</button>
+          <button class="view-btn" data-view="region" aria-label="View by region of origin">By Region of Origin</button>
+          <button class="view-btn" data-view="california" aria-label="View by California region">By California Region</button>
+        </div>
+        <button data-theme-toggle aria-label="Toggle theme" class="theme-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Oaxacan Indigenous Communities in California</h1>
+      <p class="subtitle">Approximately <strong>350,000</strong> people of Oaxacan Indigenous origin live in California, speaking more than 15 Indigenous languages. This visualization shows the distribution by language, region of origin in Oaxaca, and destination region in California.</p>
+    </section>
+
+    <section class="chart-section">
+      <div id="legend" class="legend"></div>
+      <div id="chart" class="chart-container"></div>
+      <div id="tooltip" class="tooltip"></div>
+    </section>
+
+    <div id="statsBar" class="stats-bar"></div>
+
+    <section class="map-section">
+      <div class="map-header">
+        <h2>Geographic Distribution in California</h2>
+        <p class="map-subtitle">Estimated presence of Oaxacan Indigenous communities by county</p>
+      </div>
+      <div class="map-wrapper">
+        <div id="caMap" class="map-container"></div>
+        <div id="mapLegend" class="map-legend"></div>
+      </div>
+      <div class="map-tooltip" id="mapTooltip"></div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Data Sources</h3>
+          <p>Data compiled from the Indigenous Farmworker Study (IFS), National Center for Farmworker Health (NCFH), U.S. Census 2000/2020, MICOP, Fresno Bee, and academic studies from UC Berkeley and UC Santa Cruz. Figures represent estimates based on multiple sources, given significant undercounting in official censuses.</p>
+        </div>
+        <div class="info-card">
+          <h3>About This Community</h3>
+          <p>Oaxacan Indigenous communities represent the fastest-growing farmworker population in California. Many speak only their Indigenous language, without Spanish or English, creating unique communication barriers and obstacles to accessing services.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data compiled from public sources including IFS, NCFH, Census 2020, MICOP, and academic studies</p>
+    <span>Created by Jose Luis Elizalde</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
